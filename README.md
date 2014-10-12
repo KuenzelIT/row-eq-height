@@ -12,4 +12,4 @@ You can then use "row-eq-height" as a class besides "row" to make all columns in
 Panels inside of those columns are also being resized equally.
 
 ## Demo
-See [this jsfiddle](http://jsfiddle.net/r7rwg78f/) as an example.
+See [this jsfiddle](http://jsfiddle.net/r7rwg78f/) for an example.
