@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-    var getMaxHeight = function(selector){
-        var heights = $(selector).map(function() {
+    var getMaxHeight = function(list){
+        var heights = list.map(function() {
             return $(this).height();
         }).get();
 
@@ -9,9 +9,13 @@ $( document ).ready(function() {
         return maxHeight;
     };
 
-    var selector = ".row-eq-height > [class^='col-']";
-    $(selector).height(getMaxHeight(selector));
+    $('.row-eq-height').each(function(){
+        var list = $(this).find('> [class^="col-"]');
+        $(this).find('> [class^="col-"]').height(getMaxHeight(list));
+    });
 
-    var selector = ".row-eq-height > [class^='col-'] .panel";
-    $(selector).height(getMaxHeight(selector));
+    $('.row-eq-height').each(function(){
+        var list = $(this).find('> [class^="col-"] .panel');
+        $(this).find('> [class^="col-"] .panel').height(getMaxHeight(list));
+    });
 });
